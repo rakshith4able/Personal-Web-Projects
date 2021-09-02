@@ -37,15 +37,20 @@ p2.button.addEventListener('click', function () {
     updateScores(p2, p1)
 })
 
-window.addEventListener('keyup', function (e) {
-    if (e.code == 'KeyA')
-        updateScores(p1, p2);
-})
+const targetWidth = 768;
+if ($(window).width() & gt;= targetWidth) {
 
-window.addEventListener('keyup', function (e) {
-    if (e.code == 'KeyL')
-        updateScores(p2, p1);
-})
+    window.addEventListener('keyup', function (e) {
+        if (e.code == 'KeyA')
+            updateScores(p1, p2);
+    })
+
+    window.addEventListener('keyup', function (e) {
+        if (e.code == 'KeyL')
+            updateScores(p2, p1);
+    })
+
+}
 
 
 winningScoreSelect.addEventListener('change', function () {
@@ -64,3 +69,5 @@ function reset() {
         p.button.disabled = false;
     }
 }
+
+
