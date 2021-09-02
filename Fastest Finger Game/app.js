@@ -37,23 +37,16 @@ p2.button.addEventListener('click', function () {
     updateScores(p2, p1)
 })
 
-window.addEventListener('keypress', function (e) {
+window.addEventListener('keyup', function (e) {
     if (e.code == 'KeyA')
         updateScores(p1, p2);
 })
 
-window.addEventListener('keypress', function (e) {
+window.addEventListener('keyup', function (e) {
     if (e.code == 'KeyL')
-        updateScores(p2, p1)
+        updateScores(p2, p1);
 })
 
-
-p1.button.addEventListener('touchend', function () {
-    updateScores(p1, p2)
-})
-p2.button.addEventListener('touchend', function () {
-    updateScores(p2, p1)
-})
 
 winningScoreSelect.addEventListener('change', function () {
     winningScore = parseInt(this.value);
