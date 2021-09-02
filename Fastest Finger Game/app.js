@@ -1,3 +1,5 @@
+console.dir(window);
+
 const p1 = {
     score: 0,
     button: document.querySelector('#btnp1'),
@@ -38,17 +40,27 @@ p2.button.addEventListener('click', function () {
 })
 
 
-if (window.innerWidth > 768) {
-    window.addEventListener('keyup', function (e) {
-        if (e.code == 'KeyA')
-            updateScores(p1, p2);
-    })
 
-    window.addEventListener('keyup', function (e) {
-        if (e.code == 'KeyL')
-            updateScores(p2, p1);
-    })
-}
+window.addEventListener('keyup', function (e) {
+
+    if (e.code == 'KeyA')
+        updateScores(p1, p2);
+})
+
+window.addEventListener('keyup', function (e) {
+    if (e.code == 'KeyL')
+        updateScores(p2, p1);
+})
+
+p1.button.addEventListener('touchstart', function (e) {
+    e.preventDefault();
+
+    updateScores(p1, p2)
+})
+p2.button.addEventListener('touchstart', function (e) {
+    e.preventDefault();
+    updateScores(p2, p1)
+})
 
 
 
