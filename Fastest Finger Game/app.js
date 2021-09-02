@@ -1,3 +1,5 @@
+console.dir(window);
+
 const p1 = {
     score: 0,
     button: document.querySelector('#btnp1'),
@@ -37,9 +39,8 @@ p2.button.addEventListener('click', function () {
     updateScores(p2, p1)
 })
 
-const targetWidth = 768;
-if ($(window).width() & gt;= targetWidth) {
 
+if (window.innerWidth > 768) {
     window.addEventListener('keyup', function (e) {
         if (e.code == 'KeyA')
             updateScores(p1, p2);
@@ -49,8 +50,10 @@ if ($(window).width() & gt;= targetWidth) {
         if (e.code == 'KeyL')
             updateScores(p2, p1);
     })
-
 }
+
+
+
 
 
 winningScoreSelect.addEventListener('change', function () {
