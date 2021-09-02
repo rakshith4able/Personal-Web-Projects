@@ -1,3 +1,8 @@
+body
+{
+    overflow:hidden;
+}
+
 .btn
 {
 font-size: 0.8rem;
