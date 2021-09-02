@@ -1,5 +1,3 @@
-console.dir(window);
-
 const p1 = {
     score: 0,
     button: document.querySelector('#btnp1'),
