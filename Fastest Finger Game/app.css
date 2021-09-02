@@ -12,3 +12,7 @@ font-size: 0.8rem;
 {
     color: rgba(218, 30, 30, 0.822);
 }
+
+.disable-dbl-tap-zoom {
+  touch-action: manipulation;
+}
