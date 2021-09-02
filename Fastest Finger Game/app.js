@@ -48,10 +48,10 @@ window.addEventListener('keypress', function (e) {
 })
 
 
-p1.button.addEventListener('touch', function () {
+p1.button.addEventListener('touchend', function () {
     updateScores(p1, p2)
 })
-p2.button.addEventListener('touch', function () {
+p2.button.addEventListener('touchend', function () {
     updateScores(p2, p1)
 })
 
