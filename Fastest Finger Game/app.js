@@ -44,7 +44,7 @@ window.addEventListener('keypress', function (e) {
 
 window.addEventListener('keypress', function (e) {
     if (e.code == 'KeyL')
-        updateScores(p1, p2)
+        updateScores(p2, p1)
 })
 
 
