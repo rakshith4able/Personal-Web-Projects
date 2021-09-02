@@ -47,6 +47,14 @@ window.addEventListener('keypress', function (e) {
         updateScores(p1, p2)
 })
 
+
+p1.button.addEventListener('touchstart', function () {
+    updateScores(p1, p2)
+})
+p2.button.addEventListener('touchstart', function () {
+    updateScores(p2, p1)
+})
+
 winningScoreSelect.addEventListener('change', function () {
     winningScore = parseInt(this.value);
     reset();
