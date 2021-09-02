@@ -1,0 +1,14 @@
+.btn
+{
+font-size: 0.8rem;
+}
+
+.win
+{
+    color: rgb(30, 151, 105);
+}
+
+.lose 
+{
+    color: rgba(218, 30, 30, 0.822);
+}
