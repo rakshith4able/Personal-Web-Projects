@@ -18,7 +18,7 @@ let isGameOver = false;
 
 function updateScores(player, opponent) {
     if (!isGameOver) {
-        if (winningScore === 0) {
+        if (winningScore <= 0) {
             alert("Please enter target Greater than 0");
         }
         else {
