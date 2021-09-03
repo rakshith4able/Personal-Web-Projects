@@ -15,19 +15,27 @@ let winningScore = 10;
 winningScoreSelect.value = winningScore;
 let isGameOver = false;
 
+
 function updateScores(player, opponent) {
     if (!isGameOver) {
-        player.score += 1;
-        if (player.score === winningScore) {
-            isGameOver = true;
-            player.display.classList.add('win');
-            opponent.display.classList.add('lose');
-            player.button.disabled = true;
-            opponent.button.disabled = true;
+        if (winningScore === 0) {
+            alert("Please enter target Greater than 0");
         }
-        player.display.textContent = player.score;
+        else {
+            player.score += 1;
+            if (player.score === winningScore) {
+                isGameOver = true;
+                player.display.classList.add('win');
+                opponent.display.classList.add('lose');
+                player.button.disabled = true;
+                opponent.button.disabled = true;
+            }
+            player.display.textContent = player.score;
+        }
     }
 }
+
+
 
 
 p1.button.addEventListener('click', function () {
